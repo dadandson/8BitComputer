@@ -3,7 +3,7 @@
 <eagle version="9.3.2">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
@@ -5279,8 +5279,6 @@ Source: &lt;a href="https://media.digikey.com/pdf/Data Sheets/ON Semiconductor P
 <part name="C6" library="passives" deviceset="C-US" device="C0805" value="0.1 uF"/>
 <part name="J3" library="connector" deviceset="M08" device="SILK_FEMALE_PTH"/>
 <part name="J2" library="connector" deviceset="M02" device="PTH" value="Power"/>
-<part name="J4" library="connector" deviceset="M02" device="PTH" value="Power"/>
-<part name="J5" library="connector" deviceset="M02" device="PTH" value="Power"/>
 </parts>
 <sheets>
 <sheet>
@@ -5332,14 +5330,6 @@ Source: &lt;a href="https://media.digikey.com/pdf/Data Sheets/ON Semiconductor P
 <attribute name="VALUE" x="55.88" y="0" size="1.778" layer="96"/>
 <attribute name="NAME" x="55.88" y="10.922" size="1.778" layer="95"/>
 </instance>
-<instance part="J4" gate="G$1" x="91.44" y="5.08" smashed="yes">
-<attribute name="VALUE" x="88.9" y="0" size="1.778" layer="96"/>
-<attribute name="NAME" x="88.9" y="10.922" size="1.778" layer="95"/>
-</instance>
-<instance part="J5" gate="G$1" x="119.38" y="5.08" smashed="yes">
-<attribute name="VALUE" x="116.84" y="0" size="1.778" layer="96"/>
-<attribute name="NAME" x="116.84" y="10.922" size="1.778" layer="95"/>
-</instance>
 </instances>
 <busses>
 </busses>
@@ -5385,16 +5375,6 @@ Source: &lt;a href="https://media.digikey.com/pdf/Data Sheets/ON Semiconductor P
 <wire x1="66.04" y1="5.08" x2="71.12" y2="5.08" width="0.1524" layer="91"/>
 <label x="73.66" y="5.08" size="1.778" layer="95"/>
 </segment>
-<segment>
-<pinref part="J4" gate="G$1" pin="1"/>
-<wire x1="99.06" y1="5.08" x2="104.14" y2="5.08" width="0.1524" layer="91"/>
-<label x="106.68" y="5.08" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="J5" gate="G$1" pin="1"/>
-<wire x1="127" y1="5.08" x2="132.08" y2="5.08" width="0.1524" layer="91"/>
-<label x="134.62" y="5.08" size="1.778" layer="95"/>
-</segment>
 </net>
 <net name="GND" class="0">
 <segment>
@@ -5431,16 +5411,6 @@ Source: &lt;a href="https://media.digikey.com/pdf/Data Sheets/ON Semiconductor P
 <pinref part="J2" gate="G$1" pin="2"/>
 <wire x1="66.04" y1="7.62" x2="71.12" y2="7.62" width="0.1524" layer="91"/>
 <label x="71.12" y="7.62" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="J4" gate="G$1" pin="2"/>
-<wire x1="99.06" y1="7.62" x2="104.14" y2="7.62" width="0.1524" layer="91"/>
-<label x="104.14" y="7.62" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="J5" gate="G$1" pin="2"/>
-<wire x1="127" y1="7.62" x2="132.08" y2="7.62" width="0.1524" layer="91"/>
-<label x="132.08" y="7.62" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$1" class="0">
