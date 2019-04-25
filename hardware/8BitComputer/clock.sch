@@ -6167,7 +6167,7 @@ Source: &lt;a href="https://media.digikey.com/pdf/Data Sheets/ON Semiconductor P
 <part name="U$1" library="passives" deviceset="SQUARE-TRIMPOT-POTENTIOMETER" device=""/>
 <part name="R2" library="passives" deviceset="RESISTOR" device="0805-RES" value="1 K"/>
 <part name="C2" library="passives" deviceset="C-US" device="075-032X103" value="100 nF"/>
-<part name="C3" library="passives" deviceset="C-US" device="C0805" value="1 uF"/>
+<part name="C3" library="passives" deviceset="C-US" device="C0805" value="3.3 uF"/>
 <part name="R3" library="passives" deviceset="RESISTOR" device="0805-RES" value="1 K"/>
 <part name="LED1" library="leds" deviceset="LED" device="-3MM-NO_SILK" value="Blue"/>
 <part name="R4" library="passives" deviceset="RESISTOR" device="0805-RES" value="100 R"/>
@@ -6187,7 +6187,7 @@ Source: &lt;a href="https://media.digikey.com/pdf/Data Sheets/ON Semiconductor P
 <part name="R8" library="passives" deviceset="RESISTOR" device="0805-RES" value="1 K"/>
 <part name="R9" library="passives" deviceset="RESISTOR" device="0805-RES" value="1 K"/>
 <part name="C6" library="passives" deviceset="C-US" device="C0805" value="0.1 uF"/>
-<part name="J3" library="connector" deviceset="M08" device="SILK_FEMALE_PTH"/>
+<part name="J3" library="connector" deviceset="M08" device="SILK_FEMALE_PTH" value="CLK_OUTS"/>
 <part name="J2" library="connector" deviceset="M02" device="PTH" value="Power"/>
 <part name="U$3" library="logos" deviceset="CMD_C0DE_LOGO" device="CMD_CODE_LOGO_TOP_COPPER"/>
 </parts>
@@ -6255,6 +6255,14 @@ Source: &lt;a href="https://media.digikey.com/pdf/Data Sheets/ON Semiconductor P
 <pinref part="U$1" gate="A" pin="P2"/>
 <wire x1="63.5" y1="30.48" x2="71.12" y2="30.48" width="0.1524" layer="91"/>
 <label x="71.12" y="30.48" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="TRIGGER"/>
+<pinref part="C3" gate="G$1" pin="1"/>
+<wire x1="12.7" y1="58.42" x2="-5.08" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="-5.08" y1="58.42" x2="-17.78" y2="58.42" width="0.1524" layer="91"/>
+<junction x="-5.08" y="58.42"/>
+<label x="-33.02" y="58.42" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VCC5V" class="0">
@@ -6360,16 +6368,6 @@ Source: &lt;a href="https://media.digikey.com/pdf/Data Sheets/ON Semiconductor P
 <pinref part="C2" gate="G$1" pin="1"/>
 <wire x1="66.04" y1="53.34" x2="71.12" y2="53.34" width="0.1524" layer="91"/>
 <junction x="66.04" y="53.34"/>
-</segment>
-</net>
-<net name="TRESHOLD_TRIGGER" class="0">
-<segment>
-<pinref part="IC1" gate="G$1" pin="TRIGGER"/>
-<pinref part="C3" gate="G$1" pin="1"/>
-<wire x1="12.7" y1="58.42" x2="-5.08" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="-5.08" y1="58.42" x2="-17.78" y2="58.42" width="0.1524" layer="91"/>
-<junction x="-5.08" y="58.42"/>
-<label x="-33.02" y="58.42" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="555-1-OUT" class="0">
@@ -6515,7 +6513,7 @@ Source: &lt;a href="https://media.digikey.com/pdf/Data Sheets/ON Semiconductor P
 <attribute name="VALUE" x="113.284" y="24.511" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="J3" gate="G$1" x="165.1" y="25.4" smashed="yes" rot="R180">
-<attribute name="VALUE" x="170.18" y="38.1" size="1.778" layer="96" rot="R180"/>
+<attribute name="VALUE" x="170.18" y="40.64" size="1.778" layer="96" rot="R180"/>
 <attribute name="NAME" x="170.18" y="11.938" size="1.778" layer="95" rot="R180"/>
 </instance>
 </instances>

@@ -919,7 +919,7 @@ Through-hole SPDT Switch&lt;br&gt;
 <attribute name="NAME" x="23.114" y="47.371" size="0.6096" layer="25" font="vector" rot="R90"/>
 <attribute name="VALUE" x="25.908" y="47.117" size="0.6096" layer="27" font="vector" rot="R90"/>
 </element>
-<element name="C3" library="passives" package="C0805" value="1 uF" x="13.97" y="29.21" smashed="yes" rot="R270">
+<element name="C3" library="passives" package="C0805" value="3.3 uF" x="13.97" y="29.21" smashed="yes" rot="R270">
 <attribute name="NAME" x="14.986" y="30.099" size="0.6096" layer="25" font="vector" rot="R270"/>
 <attribute name="VALUE" x="12.192" y="30.353" size="0.6096" layer="27" font="vector" rot="R270"/>
 </element>
@@ -1035,7 +1035,7 @@ Through-hole SPDT Switch&lt;br&gt;
 <attribute name="NAME" x="73.914" y="24.257" size="0.6096" layer="25" font="vector" rot="R180"/>
 <attribute name="VALUE" x="74.168" y="28.321" size="0.6096" layer="27" font="vector" rot="R180"/>
 </element>
-<element name="J3" library="connector" package="1X08" value="" x="42.2" y="5" smashed="yes">
+<element name="J3" library="connector" package="1X08" value="CLK_OUTS" x="42.2" y="5" smashed="yes">
 <attribute name="NAME" x="40.8538" y="6.8288" size="1.27" layer="25" ratio="10"/>
 <attribute name="PROD_ID" value="CONN-08438" x="42.2" y="5" size="1.778" layer="27" display="off"/>
 <attribute name="VALUE" x="40.93" y="1.825" size="1.27" layer="27"/>
@@ -1044,7 +1044,7 @@ Through-hole SPDT Switch&lt;br&gt;
 <attribute name="NAME" x="88.6538" y="6.8288" size="1.27" layer="25" ratio="10"/>
 <attribute name="VALUE" x="88.73" y="1.825" size="1.27" layer="27"/>
 </element>
-<element name="U$3" library="logos" package="CMD_C0DE_LOGO_TOP_COPPER" value="CMD_C0DE_LOGOCMD_CODE_LOGO_TOP_COPPER" x="64.77" y="63.5" smashed="yes"/>
+<element name="U$3" library="logos" package="CMD_C0DE_LOGO_TOP_COPPER" value="CMD_C0DE_LOGOCMD_CODE_LOGO_TOP_COPPER" x="50.8" y="55.88" smashed="yes"/>
 </elements>
 <signals>
 <signal name="THRESHOLD_TRIGGER">
@@ -1053,6 +1053,12 @@ Through-hole SPDT Switch&lt;br&gt;
 <wire x1="16.51" y1="41.91" x2="16.51" y2="55.626" width="0.508" layer="1"/>
 <wire x1="17.78" y1="56.896" x2="17.78" y2="60.96" width="0.508" layer="1"/>
 <wire x1="16.51" y1="55.626" x2="17.78" y2="56.896" width="0.508" layer="1"/>
+<contactref element="IC1" pad="2"/>
+<contactref element="C3" pad="1"/>
+<wire x1="13.97" y1="34.29" x2="13.97" y2="30.06" width="0.508" layer="1"/>
+<wire x1="13.97" y1="34.29" x2="13.97" y2="36.83" width="0.508" layer="1"/>
+<wire x1="13.97" y1="36.83" x2="16.51" y2="39.37" width="0.508" layer="1"/>
+<wire x1="16.51" y1="39.37" x2="16.51" y2="41.91" width="0.508" layer="1"/>
 </signal>
 <signal name="VCC5V">
 <contactref element="IC1" pad="8"/>
@@ -1091,14 +1097,17 @@ Through-hole SPDT Switch&lt;br&gt;
 <wire x1="7.874" y1="44.058" x2="7.62" y2="44.312" width="0.508" layer="1"/>
 <wire x1="7.874" y1="38.188" x2="11.43" y2="41.744" width="0.508" layer="1"/>
 <wire x1="11.43" y1="41.744" x2="11.43" y2="41.91" width="0.508" layer="1"/>
-<wire x1="7.874" y1="38.188" x2="17.487" y2="38.188" width="0.508" layer="1"/>
-<wire x1="17.487" y1="38.188" x2="17.526" y2="38.227" width="0.508" layer="1"/>
-<wire x1="17.526" y1="38.227" x2="18.161" y2="38.227" width="0.508" layer="1"/>
-<wire x1="18.934" y1="39" x2="21.59" y2="39" width="0.508" layer="1"/>
-<wire x1="18.161" y1="38.227" x2="18.934" y2="39" width="0.508" layer="1"/>
 <wire x1="88.9" y1="40.8178" x2="92.0242" y2="40.8178" width="0.8128" layer="1"/>
 <wire x1="92.0242" y1="40.8178" x2="92.71" y2="40.132" width="0.8128" layer="1"/>
 <wire x1="92.71" y1="40.132" x2="92.71" y2="22.837" width="0.8128" layer="1"/>
+<wire x1="7.874" y1="38.188" x2="3.81" y2="42.252" width="0.508" layer="1"/>
+<wire x1="3.81" y1="42.252" x2="3.81" y2="62.23" width="0.508" layer="1"/>
+<wire x1="3.81" y1="62.23" x2="10.16" y2="68.58" width="0.508" layer="1"/>
+<wire x1="10.16" y1="68.58" x2="26.67" y2="68.58" width="0.508" layer="1"/>
+<wire x1="26.67" y1="68.58" x2="29.21" y2="66.04" width="0.508" layer="1"/>
+<wire x1="29.21" y1="66.04" x2="29.21" y2="43.18" width="0.508" layer="1"/>
+<wire x1="29.21" y1="43.18" x2="25.03" y2="39" width="0.508" layer="1"/>
+<wire x1="25.03" y1="39" x2="21.59" y2="39" width="0.508" layer="1"/>
 </signal>
 <signal name="GND" airwireshidden="yes">
 <contactref element="IC1" pad="1"/>
@@ -1113,7 +1122,7 @@ Through-hole SPDT Switch&lt;br&gt;
 <contactref element="C6" pad="1"/>
 <contactref element="J3" pad="8"/>
 <contactref element="J2" pad="2"/>
-<polygon width="0.4" layer="16" isolate="1.27">
+<polygon width="0.4" layer="16" isolate="1.9304">
 <vertex x="0" y="74.93"/>
 <vertex x="0" y="0"/>
 <vertex x="100.33" y="0"/>
@@ -1138,6 +1147,9 @@ Through-hole SPDT Switch&lt;br&gt;
 <wire x1="13.97" y1="28.36" x2="12.407" y2="28.36" width="0.508" layer="1"/>
 <wire x1="12.407" y1="28.36" x2="11.43" y2="29.337" width="0.508" layer="1"/>
 <wire x1="11.43" y1="29.337" x2="11.43" y2="34.29" width="0.508" layer="1"/>
+<wire x1="11.43" y1="34.29" x2="10.16" y2="33.02" width="0.508" layer="16"/>
+<wire x1="72.65" y1="44" x2="72.39" y2="44.26" width="0.3048" layer="16"/>
+<wire x1="72.39" y1="44.26" x2="72.39" y2="45.72" width="0.3048" layer="16"/>
 </signal>
 <signal name="N$1">
 <contactref element="R1" pad="2"/>
@@ -1166,11 +1178,6 @@ Through-hole SPDT Switch&lt;br&gt;
 <contactref element="C2" pad="1"/>
 <wire x1="19.05" y1="41.91" x2="21.59" y2="44.45" width="0.6096" layer="1"/>
 <wire x1="21.59" y1="44.45" x2="24.13" y2="44.45" width="0.6096" layer="1"/>
-</signal>
-<signal name="TRESHOLD_TRIGGER">
-<contactref element="IC1" pad="2"/>
-<contactref element="C3" pad="1"/>
-<wire x1="13.97" y1="34.29" x2="13.97" y2="30.06" width="0.508" layer="1"/>
 </signal>
 <signal name="555-1-OUT">
 <contactref element="IC1" pad="3"/>
