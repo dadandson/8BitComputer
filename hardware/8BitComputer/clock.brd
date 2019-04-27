@@ -52,7 +52,7 @@
 <layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
-<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
@@ -192,6 +192,7 @@
 <hole x="97.46" y="2.54" drill="3"/>
 <hole x="97.46" y="72.46" drill="3"/>
 <hole x="2.54" y="72.46" drill="3"/>
+<text x="43.18" y="68.58" size="1.4224" layer="1">CLOCK MODULE</text>
 </plain>
 <libraries>
 <library name="passives">
@@ -1044,7 +1045,7 @@ Through-hole SPDT Switch&lt;br&gt;
 <attribute name="NAME" x="88.6538" y="6.8288" size="1.27" layer="25" ratio="10"/>
 <attribute name="VALUE" x="88.73" y="1.825" size="1.27" layer="27"/>
 </element>
-<element name="U$3" library="logos" package="CMD_C0DE_LOGO_TOP_COPPER" value="CMD_C0DE_LOGOCMD_CODE_LOGO_TOP_COPPER" x="50.8" y="55.88" smashed="yes"/>
+<element name="U$3" library="logos" package="CMD_C0DE_LOGO_TOP_COPPER" value="CMD_C0DE_LOGOCMD_CODE_LOGO_TOP_COPPER" x="92.71" y="58.42" smashed="yes"/>
 </elements>
 <signals>
 <signal name="THRESHOLD_TRIGGER">
