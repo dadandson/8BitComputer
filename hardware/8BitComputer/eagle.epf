@@ -287,8 +287,8 @@ UsedLibrary="E:/MyStuff/dev/eagle/cmdc0de-esp8266.lbr"
 [Win_1]
 Type="Schematic Editor"
 Number=2
-File="E:/MyStuff/dev/darknet/darknet8-badge/Prototype1/hardware/prototype2/prototype2.sch"
-View="-48.4091 -60.8009 324.766 102.63"
+File="E:/MyStuff/dev/darknet/darknet8-badge/DC27/hardware/DC27-bottom.sch"
+View="9.62686 0.0852344 234.81 96.9145"
 WireWidths=" 0.0762 0.1016 0.127 0.15 0.2 0.2032 0.254 0.3048 0.4064 0.508 0.6096 0.8128 1.016 1.27 2.54 0.1524"
 PadDiameters=" 0.254 0.3048 0.4064 0.6096 0.8128 1.016 1.27 1.4224 1.6764 1.778 1.9304 2.1844 2.54 3.81 6.4516 0"
 PadDrills=" 0.2 0.25 0.3 0.35 0.4 0.45 0.5 0.55 0.65 0.7 0.75 0.8 0.85 0.9 1 0.6"
@@ -327,7 +327,6 @@ ArcDirection=0
 AddLevel=2
 PadsSameType=0
 Layer=91
-Views=" 1: -48.4091 -60.8009 324.766 102.63"
 Sheet="1"
 
 [Win_2]
