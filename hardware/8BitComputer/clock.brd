@@ -193,6 +193,9 @@
 <hole x="97.46" y="72.46" drill="3"/>
 <hole x="2.54" y="72.46" drill="3"/>
 <text x="39.37" y="66.04" size="2.1844" layer="1" font="vector">CLOCK MODULE</text>
+<text x="49.53" y="45.72" size="1.4224" layer="1" font="vector">555 
+Manual</text>
+<text x="85.09" y="45.72" size="1.4224" layer="1" font="vector">HALT CPU</text>
 </plain>
 <libraries>
 <library name="passives">
@@ -1160,12 +1163,10 @@ Through-hole SPDT Switch&lt;br&gt;
 <wire x1="12.407" y1="28.36" x2="11.43" y2="29.337" width="0.508" layer="1"/>
 <wire x1="11.43" y1="29.337" x2="11.43" y2="34.036" width="0.508" layer="1"/>
 <wire x1="11.43" y1="34.036" x2="11.43" y2="34.29" width="0.508" layer="1"/>
-<wire x1="11.43" y1="34.29" x2="10.16" y2="33.02" width="0.508" layer="16"/>
-<wire x1="72.65" y1="44" x2="72.39" y2="44.26" width="0.3048" layer="16"/>
-<wire x1="72.39" y1="44.26" x2="72.39" y2="45.72" width="0.3048" layer="16"/>
 <wire x1="7.874" y1="36.488" x2="7.874" y2="34.29" width="0.508" layer="1"/>
 <wire x1="7.874" y1="34.29" x2="8.128" y2="34.036" width="0.508" layer="1"/>
 <wire x1="8.128" y1="34.036" x2="11.43" y2="34.036" width="0.508" layer="1"/>
+<wire x1="72.65" y1="44" x2="69.85" y2="44" width="0.3048" layer="16"/>
 </signal>
 <signal name="N$1">
 <contactref element="R1" pad="2"/>
@@ -1327,7 +1328,15 @@ Through-hole SPDT Switch&lt;br&gt;
 </mfgpreviewcolors>
 <errors>
 <approved hash="3,1,af34293a14a092ae"/>
+<approved hash="3,1,60602290256c679c"/>
+<approved hash="3,1,e03497759124e665"/>
 </errors>
 </board>
 </drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
 </eagle>
