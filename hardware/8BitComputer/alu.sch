@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.3.2">
+<eagle version="9.4.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -7132,11 +7132,13 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <part name="R7" library="passives" deviceset="RESISTOR" device="0805-RES" value="100 R"/>
 <part name="R8" library="passives" deviceset="RESISTOR" device="0805-RES" value="100 R"/>
 <part name="U$1" library="logos" deviceset="CMD_C0DE_LOGO" device="CMD_CODE_LOGO_TOP_COPPER"/>
+<part name="R9" library="passives" deviceset="RESISTOR" device="0805-RES" value="100 R"/>
+<part name="LED9" library="leds" deviceset="LED" device="-3MM-NO_SILK" value="RED"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
-<text x="88.9" y="73.66" size="1.778" layer="91">C4 = carry In
+<text x="86.36" y="86.36" size="1.778" layer="91">C4 = carry out
 We subtract by using the 2's compliment, 
 so we need to add one after we create 
 the 1 compliement. 
@@ -7187,9 +7189,9 @@ X - Y = X + (~Y+1)</text>
 <attribute name="NAME" x="145.415" y="52.324" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="140.589" y="52.324" size="1.778" layer="96" rot="R270"/>
 </instance>
-<instance part="J2" gate="G$1" x="66.04" y="83.82" smashed="yes" rot="R270">
-<attribute name="VALUE" x="53.34" y="88.9" size="1.778" layer="96" rot="R270"/>
-<attribute name="NAME" x="79.502" y="88.9" size="1.778" layer="95" rot="R270"/>
+<instance part="J2" gate="G$1" x="63.5" y="96.52" smashed="yes" rot="R270">
+<attribute name="VALUE" x="50.8" y="101.6" size="1.778" layer="96" rot="R270"/>
+<attribute name="NAME" x="76.962" y="101.6" size="1.778" layer="95" rot="R270"/>
 </instance>
 <instance part="J3" gate="G$1" x="144.78" y="-33.02" smashed="yes" rot="R90">
 <attribute name="VALUE" x="157.48" y="-38.1" size="1.778" layer="96" rot="R90"/>
@@ -7268,20 +7270,28 @@ X - Y = X + (~Y+1)</text>
 <attribute name="VALUE" x="10.922" y="-41.91" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="U$1" gate="G$1" x="190.5" y="-17.78" smashed="yes"/>
+<instance part="R9" gate="G$1" x="60.96" y="48.26" smashed="yes" rot="R90">
+<attribute name="NAME" x="59.4614" y="44.45" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="64.262" y="44.45" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="LED9" gate="G$1" x="60.96" y="55.88" smashed="yes" rot="R180">
+<attribute name="NAME" x="57.404" y="60.452" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="55.245" y="60.452" size="1.778" layer="96" rot="R270"/>
+</instance>
 </instances>
 <busses>
 </busses>
 <nets>
 <net name="CARRY_ADD" class="0">
 <segment>
-<pinref part="IC3" gate="G$1" pin="C4"/>
-<wire x1="60.96" y1="35.56" x2="60.96" y2="38.1" width="0.1524" layer="91"/>
-<label x="60.96" y="38.1" size="1.778" layer="95" rot="R90"/>
+<pinref part="IC8" gate="G$1" pin="C4"/>
+<wire x1="96.52" y1="35.56" x2="96.52" y2="38.1" width="0.1524" layer="91"/>
+<label x="96.52" y="38.1" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
-<pinref part="IC8" gate="G$1" pin="C0"/>
-<wire x1="93.98" y1="10.16" x2="93.98" y2="7.62" width="0.1524" layer="91"/>
-<label x="93.98" y="-5.08" size="1.778" layer="95" rot="R90"/>
+<pinref part="IC3" gate="G$1" pin="C0"/>
+<wire x1="58.42" y1="10.16" x2="58.42" y2="7.62" width="0.1524" layer="91"/>
+<label x="58.42" y="7.62" size="1.778" layer="95" rot="R270"/>
 </segment>
 </net>
 <net name="VCC5V" class="0">
@@ -7437,12 +7447,22 @@ X - Y = X + (~Y+1)</text>
 <wire x1="167.64" y1="81.28" x2="162.56" y2="81.28" width="0.1524" layer="91"/>
 <label x="157.48" y="81.28" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="LED9" gate="G$1" pin="C"/>
+<wire x1="60.96" y1="60.96" x2="60.96" y2="63.5" width="0.1524" layer="91"/>
+<label x="60.96" y="63.5" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="J5" gate="G$1" pin="5"/>
+<wire x1="193.04" y1="40.64" x2="195.58" y2="40.64" width="0.1524" layer="91"/>
+<label x="193.04" y="40.64" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="AR1_BUS7" class="0">
 <segment>
 <pinref part="J2" gate="G$1" pin="1"/>
-<wire x1="58.42" y1="78.74" x2="58.42" y2="76.2" width="0.1524" layer="91"/>
-<label x="58.42" y="66.04" size="1.778" layer="95" rot="R90"/>
+<wire x1="55.88" y1="91.44" x2="55.88" y2="88.9" width="0.1524" layer="91"/>
+<label x="55.88" y="78.74" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
 <pinref part="IC3" gate="G$1" pin="A3"/>
@@ -7453,8 +7473,8 @@ X - Y = X + (~Y+1)</text>
 <net name="AR1_BUS6" class="0">
 <segment>
 <pinref part="J2" gate="G$1" pin="2"/>
-<wire x1="60.96" y1="78.74" x2="60.96" y2="76.2" width="0.1524" layer="91"/>
-<label x="60.96" y="66.04" size="1.778" layer="95" rot="R90"/>
+<wire x1="58.42" y1="91.44" x2="58.42" y2="88.9" width="0.1524" layer="91"/>
+<label x="58.42" y="78.74" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
 <pinref part="IC3" gate="G$1" pin="A4"/>
@@ -7465,8 +7485,8 @@ X - Y = X + (~Y+1)</text>
 <net name="AR1_BUS5" class="0">
 <segment>
 <pinref part="J2" gate="G$1" pin="3"/>
-<wire x1="63.5" y1="78.74" x2="63.5" y2="76.2" width="0.1524" layer="91"/>
-<label x="63.5" y="66.04" size="1.778" layer="95" rot="R90"/>
+<wire x1="60.96" y1="91.44" x2="60.96" y2="88.9" width="0.1524" layer="91"/>
+<label x="60.96" y="78.74" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
 <pinref part="IC3" gate="G$1" pin="A2"/>
@@ -7477,8 +7497,8 @@ X - Y = X + (~Y+1)</text>
 <net name="AR1_BUS4" class="0">
 <segment>
 <pinref part="J2" gate="G$1" pin="4"/>
-<wire x1="66.04" y1="78.74" x2="66.04" y2="76.2" width="0.1524" layer="91"/>
-<label x="66.04" y="66.04" size="1.778" layer="95" rot="R90"/>
+<wire x1="63.5" y1="91.44" x2="63.5" y2="88.9" width="0.1524" layer="91"/>
+<label x="63.5" y="78.74" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
 <pinref part="IC3" gate="G$1" pin="A1"/>
@@ -7489,8 +7509,8 @@ X - Y = X + (~Y+1)</text>
 <net name="AR1_BUS3" class="0">
 <segment>
 <pinref part="J2" gate="G$1" pin="5"/>
-<wire x1="68.58" y1="78.74" x2="68.58" y2="76.2" width="0.1524" layer="91"/>
-<label x="68.58" y="66.04" size="1.778" layer="95" rot="R90"/>
+<wire x1="66.04" y1="91.44" x2="66.04" y2="88.9" width="0.1524" layer="91"/>
+<label x="66.04" y="78.74" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
 <pinref part="IC8" gate="G$1" pin="A4"/>
@@ -7501,8 +7521,8 @@ X - Y = X + (~Y+1)</text>
 <net name="AR1_BUS2" class="0">
 <segment>
 <pinref part="J2" gate="G$1" pin="6"/>
-<wire x1="71.12" y1="78.74" x2="71.12" y2="76.2" width="0.1524" layer="91"/>
-<label x="71.12" y="66.04" size="1.778" layer="95" rot="R90"/>
+<wire x1="68.58" y1="91.44" x2="68.58" y2="88.9" width="0.1524" layer="91"/>
+<label x="68.58" y="78.74" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
 <pinref part="IC8" gate="G$1" pin="A3"/>
@@ -7513,8 +7533,8 @@ X - Y = X + (~Y+1)</text>
 <net name="AR1_BUS1" class="0">
 <segment>
 <pinref part="J2" gate="G$1" pin="7"/>
-<wire x1="73.66" y1="78.74" x2="73.66" y2="76.2" width="0.1524" layer="91"/>
-<label x="73.66" y="66.04" size="1.778" layer="95" rot="R90"/>
+<wire x1="71.12" y1="91.44" x2="71.12" y2="88.9" width="0.1524" layer="91"/>
+<label x="71.12" y="78.74" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
 <pinref part="IC8" gate="G$1" pin="A2"/>
@@ -7525,8 +7545,8 @@ X - Y = X + (~Y+1)</text>
 <net name="AR1_BUS0" class="0">
 <segment>
 <pinref part="J2" gate="G$1" pin="8"/>
-<wire x1="76.2" y1="78.74" x2="76.2" y2="76.2" width="0.1524" layer="91"/>
-<label x="76.2" y="66.04" size="1.778" layer="95" rot="R90"/>
+<wire x1="73.66" y1="91.44" x2="73.66" y2="88.9" width="0.1524" layer="91"/>
+<label x="73.66" y="78.74" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
 <pinref part="IC8" gate="G$1" pin="A1"/>
@@ -7773,9 +7793,9 @@ X - Y = X + (~Y+1)</text>
 <label x="2.54" y="-2.54" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
-<pinref part="J5" gate="G$1" pin="3"/>
-<wire x1="193.04" y1="35.56" x2="195.58" y2="35.56" width="0.1524" layer="91"/>
-<label x="195.58" y="35.56" size="1.778" layer="95"/>
+<pinref part="J5" gate="G$1" pin="2"/>
+<wire x1="193.04" y1="33.02" x2="195.58" y2="33.02" width="0.1524" layer="91"/>
+<label x="195.58" y="33.02" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="AR2O_4" class="0">
@@ -7832,17 +7852,17 @@ X - Y = X + (~Y+1)</text>
 <wire x1="162.56" y1="35.56" x2="162.56" y2="38.1" width="0.1524" layer="91"/>
 <label x="162.56" y="38.1" size="1.778" layer="95" rot="R90"/>
 </segment>
+<segment>
+<pinref part="IC8" gate="G$1" pin="B3"/>
+<wire x1="81.28" y1="35.56" x2="81.28" y2="38.1" width="0.1524" layer="91"/>
+<label x="81.28" y="38.1" size="1.778" layer="95" rot="R90"/>
+</segment>
 </net>
 <net name="AR2O_3" class="0">
 <segment>
 <pinref part="IC2" gate="G$1" pin="4Y"/>
 <wire x1="154.94" y1="35.56" x2="154.94" y2="38.1" width="0.1524" layer="91"/>
 <label x="154.94" y="38.1" size="1.778" layer="95" rot="R90"/>
-</segment>
-<segment>
-<pinref part="IC8" gate="G$1" pin="B3"/>
-<wire x1="81.28" y1="35.56" x2="81.28" y2="38.1" width="0.1524" layer="91"/>
-<label x="81.28" y="38.1" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
 <pinref part="IC8" gate="G$1" pin="B4"/>
@@ -7916,14 +7936,14 @@ X - Y = X + (~Y+1)</text>
 <label x="149.86" y="-7.62" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
-<pinref part="IC8" gate="G$1" pin="C4"/>
-<wire x1="96.52" y1="35.56" x2="96.52" y2="38.1" width="0.1524" layer="91"/>
-<label x="96.52" y="38.1" size="1.778" layer="95" rot="R90"/>
-</segment>
-<segment>
 <pinref part="J5" gate="G$1" pin="4"/>
 <wire x1="193.04" y1="38.1" x2="195.58" y2="38.1" width="0.1524" layer="91"/>
 <label x="195.58" y="38.1" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC8" gate="G$1" pin="C0"/>
+<wire x1="93.98" y1="10.16" x2="93.98" y2="7.62" width="0.1524" layer="91"/>
+<label x="93.98" y="-5.08" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
 <net name="ALUOUT_0" class="0">
@@ -8029,15 +8049,9 @@ X - Y = X + (~Y+1)</text>
 <label x="5.08" y="38.1" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
-<pinref part="J5" gate="G$1" pin="2"/>
-<wire x1="193.04" y1="33.02" x2="195.58" y2="33.02" width="0.1524" layer="91"/>
-<label x="195.58" y="33.02" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="N$6" class="0">
-<segment>
-<pinref part="J5" gate="G$1" pin="5"/>
-<wire x1="193.04" y1="40.64" x2="195.58" y2="40.64" width="0.1524" layer="91"/>
+<pinref part="J5" gate="G$1" pin="3"/>
+<wire x1="193.04" y1="35.56" x2="195.58" y2="35.56" width="0.1524" layer="91"/>
+<label x="195.58" y="35.56" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -8094,6 +8108,19 @@ X - Y = X + (~Y+1)</text>
 <pinref part="LED8" gate="G$1" pin="A"/>
 <pinref part="R1" gate="G$1" pin="1"/>
 <wire x1="60.96" y1="-48.26" x2="60.96" y2="-43.18" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$10" class="0">
+<segment>
+<pinref part="IC3" gate="G$1" pin="C4"/>
+<pinref part="R9" gate="G$1" pin="1"/>
+<wire x1="60.96" y1="35.56" x2="60.96" y2="43.18" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$11" class="0">
+<segment>
+<pinref part="R9" gate="G$1" pin="2"/>
+<pinref part="LED9" gate="G$1" pin="A"/>
 </segment>
 </net>
 </nets>
