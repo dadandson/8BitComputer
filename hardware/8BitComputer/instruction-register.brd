@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.3.2">
+<eagle version="9.5.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -188,8 +188,7 @@
 <wire x1="100" y1="0" x2="100" y2="75" width="0" layer="20"/>
 <wire x1="100" y1="75" x2="0" y2="75" width="0" layer="20"/>
 <wire x1="0" y1="75" x2="0" y2="0" width="0" layer="20"/>
-<text x="2.54" y="63.5" size="1.016" layer="1">Instruction
-Register</text>
+<text x="37.338" y="59.436" size="1.9304" layer="1">Instruction Register</text>
 <text x="90.17" y="6.35" size="1.016" layer="1">Register 3</text>
 <hole x="2.54" y="72.39" drill="3"/>
 <hole x="97.79" y="72.39" drill="3"/>
@@ -1948,10 +1947,4 @@ grid 7.5 mm, outline 3.2 x 10.3 mm</description>
 </mfgpreviewcolors>
 </board>
 </drawing>
-<compatibility>
-<note version="6.3" minversion="6.2.2" severity="warning">
-Since Version 6.2.2 text objects can contain more than one line,
-which will not be processed correctly with this version.
-</note>
-</compatibility>
 </eagle>
