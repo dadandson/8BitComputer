@@ -196,59 +196,9 @@
 <text x="49.022" y="45.72" size="1.4224" layer="1" font="vector">   555 
 MANUAL</text>
 <text x="82.677" y="45.974" size="1.4224" layer="1" font="vector">HALT CLOCK</text>
-<polygon width="0.8128" layer="41">
-<vertex x="36.83" y="66.04"/>
-<vertex x="36.83" y="62.357"/>
-<vertex x="68.707" y="62.357"/>
-<vertex x="68.707" y="66.04"/>
-</polygon>
-<polygon width="0.8128" layer="41">
-<vertex x="83.82" y="71.12"/>
-<vertex x="83.82" y="63.627"/>
-<vertex x="91.44" y="63.627"/>
-<vertex x="91.44" y="71.12"/>
-<vertex x="83.947" y="71.12"/>
-</polygon>
 <text x="25.273" y="18.923" size="1.778" layer="1">MANUAL CLOCK</text>
-<polygon width="0.8128" layer="41">
-<vertex x="48.514" y="49.911"/>
-<vertex x="48.514" y="45.339"/>
-<vertex x="56.896" y="45.339"/>
-<vertex x="56.896" y="49.911"/>
-</polygon>
-<polygon width="0.8128" layer="41">
-<vertex x="82.423" y="48.26"/>
-<vertex x="82.423" y="45.212"/>
-<vertex x="93.98" y="45.212"/>
-<vertex x="93.98" y="48.26"/>
-</polygon>
-<polygon width="0.8128" layer="41">
-<vertex x="24.638" y="21.59"/>
-<vertex x="24.638" y="18.288"/>
-<vertex x="42.926" y="18.288"/>
-<vertex x="42.926" y="21.59"/>
-</polygon>
-<polygon width="0.8128" layer="41">
-<vertex x="47.752" y="20.32"/>
-<vertex x="47.752" y="17.78"/>
-<vertex x="47.879" y="17.653"/>
-<vertex x="52.07" y="17.653"/>
-<vertex x="52.07" y="20.32"/>
-</polygon>
-<polygon width="0.8128" layer="41">
-<vertex x="68.58" y="19.304"/>
-<vertex x="68.58" y="17.653"/>
-<vertex x="72.644" y="17.653"/>
-<vertex x="72.644" y="19.304"/>
-</polygon>
 <text x="12.065" y="46.609" size="1.778" layer="1">  555
 TIMER</text>
-<polygon width="0.6096" layer="41">
-<vertex x="11.43" y="52.07"/>
-<vertex x="11.43" y="45.72"/>
-<vertex x="19.431" y="45.72"/>
-<vertex x="19.431" y="52.07"/>
-</polygon>
 </plain>
 <libraries>
 <library name="passives">
